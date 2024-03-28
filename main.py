@@ -1,4 +1,3 @@
-import pathlib
 import textwrap
 
 import google.generativeai as genai
@@ -9,11 +8,6 @@ from IPython.display import Markdown
 import json
 
 import time, os, sys
-
-
-def to_markdown(text):
-  text = text.replace('•', '  *')
-  return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
 
 f = open("gemini_ai.json", 'r')
